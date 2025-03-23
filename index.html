@@ -1,213 +1,151 @@
 <!DOCTYPE html>
-
-<html lang="zh-Hant">
+<html lang="zh-Hans">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>VGTB 生電服务器介紹</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&amp;display=swap" rel="stylesheet"/>
+<title>VGTB 生电服务器介绍</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet"/>
 <style>
-    body {
-      font-family: 'Noto Sans TC', sans-serif;
-      background: linear-gradient(to bottom, #fffef2, #faf8ef);
-      color: #333;
-      margin: 0;
-      padding: 0;
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-    header {
-      background: linear-gradient(135deg, #fef3c7, #fde68a);
-      padding: 3rem 1rem;
-      text-align: center;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      position: relative;
-      animation: fadeDown 1.2s ease-out;
-    }
-    header::after {
-      content: '';
-      position: absolute;
-      bottom: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 4px;
-      background-color: #facc15;
-      border-radius: 2px;
-      animation: slideIn 1.5s ease-out;
-    }
-    header h1 {
-      font-size: 3.5rem;
-      margin: 0;
-      color: #1f2937;
-      animation: popIn 1s ease-out;
-    }
-    header p {
-      color: #444;
-      font-size: 1.3rem;
-      margin-top: 1rem;
-      animation: fadeIn 1.5s ease-in;
-    }
-    .container {
-      max-width: 1000px;
-      margin: 3rem auto;
-      background: #fff;
-      padding: 3rem;
-      border-radius: 24px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-      animation: fadeUp 1.2s ease-out;
-    }
-    h2 {
-      border-left: 6px solid #facc15;
-      padding-left: 1rem;
-      margin-top: 2.5rem;
-      font-size: 1.6rem;
-      color: #111827;
-      position: relative;
-    }
-    h2::after {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      left: 0;
-      width: 60px;
-      height: 3px;
-      background: #facc15;
-      animation: slideIn 1s ease-out;
-    }
-    ul {
-      padding-left: 1.5rem;
-    }
-    li {
-      margin-bottom: 0.6rem;
-      transition: transform 0.2s ease, background 0.3s;
-      padding-left: 0.5rem;
-    }
-    li:hover {
-      transform: translateX(8px);
-      background: rgba(250, 204, 21, 0.1);
-      border-left: 3px solid #facc15;
-    }
-    a {
-      color: #1d4ed8;
-      text-decoration: none;
-      transition: all 0.3s ease-in-out;
-    }
-    a:hover {
-      color: #dc2626;
-      text-decoration: underline;
-    }
-    img {
-      max-width: 100%;
-      border-radius: 14px;
-      margin-top: 1.5rem;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-      transition: transform 0.4s ease-in-out;
-    }
-    img:hover {
-      transform: scale(1.03) rotate(-1deg);
-    }
-    .banner {
-      background: url('screenshots/spawn.png') center/cover no-repeat;
-      height: 300px;
-      border-radius: 20px;
-      margin-bottom: 3rem;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-      animation: fadeUp 1.5s ease-out;
-    }
-    .quote {
-      background: #fef9c3;
-      padding: 2rem;
-      margin-top: 3rem;
-      border-left: 6px solid #facc15;
-      font-style: italic;
-      font-size: 1.2rem;
-      color: #4b5563;
-      border-radius: 12px;
-      animation: fadeIn 2s ease-in;
-    }
-    .video-embed {
-      margin-top: 3rem;
-      text-align: center;
-    }
-    iframe {
-      width: 100%;
-      height: 550px;
-      max-width: 800px;
-      border: none;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.95rem;
-      color: #666;
-      background: linear-gradient(to right, #f3f4f6, #e5e7eb);
-      margin-top: 3rem;
-    }
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    @keyframes popIn {
-      0% { transform: scale(0.9); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
-    }
-    @keyframes slideIn {
-      from { width: 0; }
-      to { width: 60px; }
-    }
-  </style>
+  body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background: linear-gradient(to bottom, #fffef2, #faf8ef);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+  .banner {
+    position: relative;
+    background: url('screenshots/spawn.png') center/cover no-repeat;
+    height: 300px;
+    width: 100%;
+  }
+  .banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+  }
+  header {
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    padding: 2rem 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  header h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #1f2937;
+  }
+  header p {
+    margin-top: 0.5rem;
+    color: #555;
+  }
+  nav {
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  nav a {
+    margin: 0 0.75rem;
+    color: #1d4ed8;
+    text-decoration: none;
+  }
+  nav a:hover {
+    text-decoration: underline;
+    color: #dc2626;
+  }
+  .github-link img,
+  .discord-link img {
+    height: 24px;
+    vertical-align: middle;
+    margin-left: 10px;
+  }
+  .container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+  }
+  h2 {
+    border-left: 4px solid #facc15;
+    padding-left: 0.75rem;
+    color: #222;
+  }
+  footer {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 2rem;
+    background: #f1f5f9;
+  }
+</style>
 </head>
 <body>
-<header>
-<h1>⚡ VGTB 生電服务器</h1>
-<p>四年匠心沉淀，寻找共创未来的你</p>
-</header>
-<div class="container">
-<div class="banner"></div>
-<h2>🔗 加入方式</h2>
-<ul>
-<li>服务器 IP：<strong>vgtb.net</strong></li>
-<li>版本：Minecraft 1.16.5（Fabric）</li>
-<li>請先加入招新群(QQ)725775316</li>
-</ul>
-<h2>📦 使用模组</h2>
-<ul>
-<li>Carpet</li>
-<li>Lithium</li>
-<li>更多請參見：<a href="mods/mods-list.md">mods-list.md</a></li>
-</ul>
-<h2>📷 截图展示</h2>
-<img alt="全物品" src="screenshot/spawn.png"/>
-<h2>🎥 精彩视频</h2>
-<div class="video-embed">
-<iframe allowfullscreen="" src="https://player.bilibili.com/player.html?bvid=BV1U6421u7VH&amp;high_quality=1&amp;as_wide=1&amp;danmaku=0"></iframe>
+<div class="banner">
+  <img src="screenshot/banner.png" alt="橫幅"/>
 </div>
-<h2>📜 服务器规则</h2>
-<ul>
-<li>禁止使用外挂</li>
-<li>尊重其他玩家</li>
-<li>禁止刷屏与骚扰</li>
-<li>違規者將踢出服务器</li>
-</ul>
-<h2>🚪 如何加入</h2>
-<p>請參閱<a href="join.md">join.md</a></p>
-<div class="quote">
-      「欢迎任何人加入（要饭）」
-    </div>
+<header>
+  <h1>⚡ VGTB 生电服务器</h1>
+  <p>四年匠心沉淀，寻找共创未来的你</p>
+</header>
+<nav>
+  <div>
+    <a href="#intro">介绍</a>
+    <a href="#rules">规则</a>
+    <a href="#join">加入</a>
+  </div>
+  <div>
+    <a class="github-link" href="https://github.com/woodengrass/vgtb.net" target="_blank">
+      <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub"/>
+    </a>
+    <a class="discord-link" href="https://discord.gg/TvsZkuHGcR" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord"/>
+    </a>
+  </div>
+</nav>
+<div class="container">
+  <h2 id="intro">🔗 加入方式</h2>
+  <ul>
+    <li>服务器 IP：<strong>vgtb.net</strong></li>
+    <li>版本：Minecraft 1.16.5（Fabric）</li>
+    <li>请先加入DC群組或QQ招新群(725775316)</li>
+  </ul>
+  <h2>📦 使用模组</h2>
+  <ul>
+    <li>Carpet</li>
+    <li>Lithium</li>
+    <li>更多见：<a href="mods/mods-list.md">mods-list.md</a></li>
+  </ul>
+  <h2>📷 截图展示</h2>
+  <img src="screenshot/spawn.png" alt="全物品"/>
+  <h2>🎥 精彩视频</h2>
+  <div class="video-embed">
+    <iframe allowfullscreen src="https://player.bilibili.com/player.html?bvid=BV1U6421u7VH&high_quality=1&as_wide=1&danmaku=0"></iframe>
+  </div>
+  <h2 id="rules">📜 服务器规则</h2>
+  <ul>
+    <li>禁止使用外挂</li>
+    <li>尊重其他玩家</li>
+    <li>禁止刷屏与骚扰</li>
+    <li>违规者将踢出服务器</li>
+  </ul>
+  <h2 id="join">🚪 如何加入</h2>
+  <p>请参考 <a href="join.md">join.md</a></p>
+  <div class="quote">「欢迎任何人加入（要饭）」</div>
 </div>
 <footer>
-<p>VGTB server all right reserved @2025</p>
+  <p>VGTB server all rights reserved @2025</p>
 </footer>
 </body>
 </html>
