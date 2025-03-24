@@ -25,6 +25,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    animation: fadeInBanner 2s ease-out;
   }
   .banner::after {
     content: '';
@@ -40,13 +41,16 @@
     z-index: 1;
     margin: 0;
     color: #1f2937;
+    animation: popIn 1s ease-out;
   }
   .banner h1 {
     font-size: 3rem;
+    animation-delay: 0.3s;
   }
   .banner p {
     margin-top: 0.5rem;
     color: #555;
+    animation-delay: 0.5s;
   }
   nav {
     background: #fff;
@@ -56,6 +60,15 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    animation: fadeIn 1s ease-out;
+  }
+  nav .left-group {
+    display: flex;
+    align-items: center;
+  }
+  .logo {
+    height: 28px;
+    margin-right: 1rem;
   }
   nav a {
     margin: 0 0.75rem;
@@ -78,6 +91,7 @@
     background: #fff;
     padding: 2rem;
     border-radius: 16px;
+    animation: fadeUp 1s ease-in;
   }
   .container img {
     max-width: 100%;
@@ -85,18 +99,118 @@
     display: block;
     margin: 1rem auto;
     border-radius: 12px;
+    transition: transform 0.3s ease;
+  }
+  .container img:hover {
+    transform: scale(1.03);
   }
   h2 {
     border-left: 4px solid #facc15;
     padding-left: 0.75rem;
     color: #222;
+    animation: fadeIn 1s ease-in;
   }
-  footer {
+  h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #facc15;
+    animation: slideIn 1s ease-out;
+  }
+  ul {
+    padding-left: 1.5rem;
+  }
+  li {
+    margin-bottom: 0.6rem;
+    transition: transform 0.2s ease, background 0.3s;
+    padding-left: 0.5rem;
+  }
+  li:hover {
+    transform: translateX(8px);
+    background: rgba(250, 204, 21, 0.1);
+    border-left: 3px solid #facc15;
+  }
+  a {
+    color: #1d4ed8;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+  a:hover {
+    color: #dc2626;
+    text-decoration: underline;
+  }
+  .quote {
+    background: #fef9c3;
+    padding: 2rem;
+    margin-top: 3rem;
+    border-left: 6px solid #facc15;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #4b5563;
+    border-radius: 12px;
+    animation: fadeIn 2s ease-in;
+  }
+  .video-embed {
     margin-top: 3rem;
     text-align: center;
-    font-size: 0.9rem;
+  }
+  iframe {
+    width: 100%;
+    height: 550px;
+    max-width: 800px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+  footer {
+    text-align: center;
     padding: 2rem;
-    background: #f1f5f9;
+    font-size: 0.95rem;
+    color: #666;
+    background: linear-gradient(to right, #f3f4f6, #e5e7eb);
+    margin-top: 3rem;
+    animation: fadeIn 1.2s ease-in;
+  }
+  @keyframes fadeInBanner {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes popIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  @keyframes slideIn {
+    from { width: 0; }
+    to { width: 60px; }
+  }
+  .screenshot-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.75rem;
+    margin-top: 1.5rem;
+    padding: 0 1rem;
+  }
+  .screenshot-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  .screenshot-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
   }
 </style>
 </head>
@@ -106,7 +220,8 @@
   <p>四年匠心沉淀，寻找共创未来的你</p>
 </div>
 <nav>
-  <div>
+  <div class="left-group">
+    <img class="logo" src="screenshot/logo.png" alt="VGTB Logo"/>
     <a href="#intro">介绍</a>
     <a href="#rules">规则</a>
     <a href="#join">加入</a>
@@ -121,37 +236,49 @@
   </div>
 </nav>
 <div class="container">
+  <div class="banner">
+    <img src="screenshot/banner.png" alt="橫幅"/>
+  </div>
   <h2 id="intro">🔗 加入方式</h2>
   <ul>
     <li>服务器 IP：<strong>vgtb.net</strong></li>
     <li>版本：Minecraft 1.16.5（Fabric）</li>
-    <li>请先加入DC群組或QQ招新群(725775316)</li>
+    <li>請先加入招新群(QQ)725775316</li>
   </ul>
   <h2>📦 使用模组</h2>
   <ul>
     <li>Carpet</li>
     <li>Lithium</li>
-    <li>更多见：<a href="mods/mods-list.md">mods-list.md</a></li>
+    <li>更多請參見：<a href="mods/mods-list.md">mods-list.md</a></li>
   </ul>
   <h2>📷 截图展示</h2>
-  <img src="screenshot/spawn.png" alt="全物品"/>
+  <div class="screenshot-gallery">
+    <img src="screenshot/spawn.png" alt="全物品"/>
+    <img src="screenshot/central_college.png" alt="中心學院"/>
+    <img src="screenshot/meseum.png" alt="博物館"/>
+    <img src="screenshot/main_city.png" alt="主城"/>
+    <img src="screenshot/pagoda.png" alt="寶塔"/>
+    <img src="screenshot/chinese_new_year_celebration.png" alt="新年慶祝"/>
+</div>
   <h2>🎥 精彩视频</h2>
   <div class="video-embed">
-    <iframe allowfullscreen src="https://player.bilibili.com/player.html?bvid=BV1U6421u7VH&high_quality=1&as_wide=1&danmaku=0"></iframe>
+    <iframe allowfullscreen="" src="https://player.bilibili.com/player.html?bvid=BV1U6421u7VH&high_quality=1&as_wide=1&danmaku=0"></iframe>
   </div>
   <h2 id="rules">📜 服务器规则</h2>
   <ul>
     <li>禁止使用外挂</li>
     <li>尊重其他玩家</li>
     <li>禁止刷屏与骚扰</li>
-    <li>违规者将踢出服务器</li>
+    <li>違規者將踢出服务器</li>
   </ul>
   <h2 id="join">🚪 如何加入</h2>
-  <p>请参考 <a href="join.md">join.md</a></p>
-  <div class="quote">「欢迎任何人加入（要饭）」</div>
+  <p>請參閱<a href="join.md">join.md</a></p>
+  <div class="quote">
+    「欢迎任何人加入（要饭）」
+  </div>
 </div>
 <footer>
-  <p>VGTB server all rights reserved @2025</p>
+  <p>VGTB server all right reserved @2025</p>
 </footer>
 </body>
 </html>
