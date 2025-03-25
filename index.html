@@ -53,6 +53,9 @@
     animation-delay: 0.5s;
   }
   nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     background: #fff;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 0.5rem 1rem;
@@ -212,7 +215,11 @@
     transform: scale(1.05);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
   }
-</style>  
+</style>
+<script src="js/lightbox.js"></script>
+<script src="js/lang-toggle.js"></script>
+</head>
+
 <body>
 <div class="banner">
   <h1>⚡ VGTB 生电服务器</h1>
@@ -277,7 +284,5 @@
   <p>VGTB server all right reserved @2025</p>
   <p>網站問題請聯繫木頭草-微信Woodengrass</p>
 </footer>
-<script src="js/lightbox.js"></script>
-<script src="js/lang-toggle.js"></script>
 </body>
 </html>
