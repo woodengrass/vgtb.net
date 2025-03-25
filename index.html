@@ -212,65 +212,7 @@
     transform: scale(1.05);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
   }
-</style>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const images = document.querySelectorAll(".screenshot-gallery img");
-    const overlay = document.createElement("div");
-    const imgBox = document.createElement("img");
-    overlay.style.position = "fixed";
-    overlay.style.top = 0;
-    overlay.style.left = 0;
-    overlay.style.width = "100vw";
-    overlay.style.height = "100vh";
-    overlay.style.background = "rgba(0,0,0,0.8)";
-    overlay.style.display = "flex";
-    overlay.style.justifyContent = "center";
-    overlay.style.alignItems = "center";
-    overlay.style.zIndex = "9999";
-    overlay.style.display = "none";
-    imgBox.style.maxWidth = "90%";
-    imgBox.style.maxHeight = "90%";
-    imgBox.style.borderRadius = "12px";
-    overlay.appendChild(imgBox);
-    document.body.appendChild(overlay);
-    overlay.addEventListener("click", () => overlay.style.display = "none");
-    images.forEach(img => {
-      img.style.cursor = "zoom-in";
-      img.addEventListener("click", () => {
-        imgBox.src = img.src;
-        overlay.style.display = "flex";
-      });
-    });
-  });
-</script>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const toggle = document.createElement('button');
-    toggle.textContent = document.documentElement.lang === 'zh-Hans' ? '繁體中文' : '简体中文';
-    toggle.className = 'lang-button';
-    toggle.style.marginLeft = '10px';
-    toggle.onclick = () => {
-      const current = document.documentElement.lang;
-      const newLang = current === 'zh-Hans' ? 'zh-Hant' : 'zh-Hans';
-      const targetFile = newLang === 'zh-Hant' ? 'index-zh-Hant.html' : 'index.html';
-      localStorage.setItem("preferredLang", newLang);
-      window.location.href = targetFile;
-    };
-    document.querySelector('nav > div:last-child').appendChild(toggle);
-  });
-</script>
-</head>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const savedLang = localStorage.getItem("preferredLang");
-    const currentLang = document.documentElement.lang;
-    if (savedLang && savedLang !== currentLang) {
-      const targetFile = savedLang === 'zh-Hant' ? 'index-zh-Hant.html' : 'index.html';
-      window.location.replace(targetFile);
-    }
-  });
-</script>
+</style>  
 <body>
 <div class="banner">
   <h1>⚡ VGTB 生电服务器</h1>
