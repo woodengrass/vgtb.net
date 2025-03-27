@@ -56,14 +56,18 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 0.5rem 1rem;
+    background: linear-gradient(to right, #fef9c3, #e0f2fe);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 0.6rem 1.2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    animation: fadeIn 1s ease-out;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease-in-out;
+    animation: fadeIn 1s ease;
+    border-radius: 0 0 12px 12px;
   }
   nav .left-group {
     display: flex;
@@ -77,9 +81,15 @@
     margin: 0 0.75rem;
     color: #1d4ed8;
     text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
   }
   nav a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    background: rgba(253, 224, 71, 0.3);
     color: #dc2626;
   }
   .github-link img,
@@ -243,14 +253,30 @@
   .container, .banner, footer {
     opacity: 0;
     transform: translateY(50px);
-    transition: all 1s ease;
+    transition: all 1s ease, transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.6s ease;
   }
   .visible {
     opacity: 1 !important;
     transform: translateY(0) !important;
   }
+  .section-title {
+    display: inline-block;
+    animation: popIn 0.8s ease;
+  }
+  .section-title::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #facc15;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    animation: popIn 0.8s ease;
+  }
 </style>
 <script src="js/lightbox.js"></script>
+<script src="js/intro-animation.js"></script>
 <script src="js/lang-toggle.js"></script>
 <script src="js/scroll-reveal.js"></script>
 </head>
@@ -259,21 +285,9 @@
   <h1>⚡ VGTB 生電伺服器</h1>
   <p>四年匠心沉澱，尋找共創未來的你</p>
 </div>
-<div class="container">
-  <div class="intro-text" style="margin-top: 2rem; max-width: 800px; margin-left:auto; margin-right:auto; padding: 1rem 2rem; background: rgba(255,255,255,0.95); border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-    <p style="font-size: 1.15rem; color: #444; line-height: 1.9;">
-      VGTB 是一個原高中生（現大學生）創立的俱樂部式生電伺服器，距今已有四年歷史。<br/><br/>
-      我們的不同點：這裡有極其親民的審核門檻、寬鬆的管理制度，在不違反原版的情況下給玩家最大的便利。<br/><br/>
-      伺服器成員之間關係和諧，常有線下交流。我們未來的規劃是養老、長期建設、不更換存檔；四年堅持公益，資金來源於腐竹自掏腰包以及自願眾籌。<br/><br/>
-      活躍人數過少瀕臨倒閉，報名且素質經審核後沒有問題伺服器都會收。<br/><br/>
-      生電上，傾向於製造穩定、好用、魯棒性高的機器，以此滿足建築和遊戲內娛樂活動的材料需求。不刻意追求極端或不穩定的新技術。<br/><br/>
-      作為一個慢節奏的長期伺服器，我們希望打造一個共同學習、成長並增強交流的平台，在技術和建築的平衡下共建一個溫暖的賽博烏托邦。
-    </p>
-  </div>
-</div>
 <nav>
   <div class="left-group">
-    <img class="logo" src="screenshot/logo.png" alt="VGTB 標誌"/>
+    <img class="logo" src="screenshot/VGTB.png" alt="VGTB 標誌"/>
     <a href="#intro">加入</a>
     <a href="#rules">規則</a>
   </div>
@@ -286,14 +300,23 @@
     </a>
   </div>
 </nav>
+<div class="container intro-text" style="max-width: 1000px; margin: 2rem auto; padding: 2rem 2.5rem; background: #fefce8; border-left: 6px solid #facc15; border-radius: 14px; box-shadow: 0 4px 16px rgba(0,0,0,0.05); font-size: 1.1rem; line-height: 1.95; color: #444; opacity: 0; transform: translateY(50px); transition: all 0.8s ease-in-out;">
+    VGTB 是一個原高中生（現大學生）創立的俱樂部式生電伺服器，距今已有四年歷史。
+    我們的不同點：這裡有極其親民的審核門檻、寬鬆的管理制度，在不違反原版的情況下給玩家最大的便利。
+    伺服器成員之間關係和諧，常有線下交流。我們未來的規劃是養老、長期建設、不更換存檔；四年堅持公益，資金來源於腐竹自掏腰包以及自願眾籌。
+    活躍人數過少瀕臨倒閉，報名且素質經審核後沒有問題伺服器都會收。<br/><br/>
+    生電上，傾向於製造穩定、好用、魯棒性高的機器，以此滿足建築和遊戲內娛樂活動的材料需求。不刻意追求極端或不穩定的新技術。
+    作為一個慢節奏的長期伺服器，我們希望打造一個共同學習、成長並增強交流的平台，在技術和建築的平衡下共建一個溫暖的賽博烏托邦。
+
+</div>
 <div class="container">
-  <h2 id="intro">🔗 加入方式</h2>
+  <h2 id="intro">🔗 <span class="section-title">加入方式</span></h2>
   <ul>
     <li>伺服器 IP：<strong>vgtb.net</strong></li>
     <li>版本：Minecraft 1.16.5（Fabric）</li>
     <li>請先加入Discord（網頁右上角工具列）或是招新群(QQ)725775316</li>
   </ul>
-  <h2>📦 使用模組</h2>
+  <h2>📦 <span class="section-title">使用模組</span></h2>
   <ul>
     <li>Carpet</li>
     <li>Lithium</li>
@@ -304,7 +327,7 @@
       ⬇️ 下載模組包
     </a>
   </div>
-  <h2>📷 截圖展示</h2>
+  <h2>📷 <span class="section-title">截圖展示</span></h2>
   <div class="screenshot-gallery">
     <img src="screenshot/spawn.png" alt="全物品"/>
     <img src="screenshot/central_college.png" alt="中心學院"/>
@@ -313,11 +336,11 @@
     <img src="screenshot/pagoda.png" alt="寶塔"/>
     <img src="screenshot/chinese_new_year_celebration.png" alt="新年慶祝"/>
   </div>
-  <h2>🎥 精彩影片</h2>
+  <h2>🎥 <span class="section-title">精彩影片</span></h2>
   <div class="video-embed">
     <iframe allowfullscreen="" src="https://player.bilibili.com/player.html?bvid=BV1U6421u7VH&high_quality=1&as_wide=1&danmaku=0"></iframe>
   </div>
-  <h2 id="rules">📜 伺服器規則</h2>
+  <h2 id="rules">📜 <span class="section-title">伺服器規則</span></h2>
   <ul>
     <li>禁止使用外掛</li>
     <li>尊重其他玩家</li>
