@@ -215,17 +215,64 @@
     transform: scale(1.05);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
   }
-</style>
+  .intro-cover {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(to bottom, #fefce8, #fff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    box-sizing: border-box;
+    animation: fadeIn 1.5s ease-in;
+  }
+  .intro-text {
+    max-width: 700px;
+    animation: popIn 1.4s ease;
+  }
+  .intro-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #1f2937;
+  }
+  .intro-text p {
+    font-size: 1.25rem;
+    color: #555;
+  }
+  .container, .banner, footer {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+  }
+  .visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+<script src="js/lightbox.js"></script>
+<script src="js/lang-toggle.js"></script>
+<script src="js/scroll-reveal.js"></script>
 </head>
 <body>
+</div>
 <div class="banner">
   <h1>⚡ VGTB 生電伺服器</h1>
   <p>四年匠心沉澱，尋找共創未來的你</p>
+  <div class="intro-text" style="margin-top: 2rem; max-width: 800px; padding: 1rem 2rem; background: rgba(255,255,255,0.85); border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+    <p style="font-size: 1.15rem; color: #444; line-height: 1.9;">
+      VGTB 是一個原高中生（現大學生）創立的俱樂部式生電伺服器，距今已有四年歷史。<br/><br/>
+      我們的不同點：這裡有極其親民的審核門檻、寬鬆的管理制度，在不違反原版的情況下給玩家最大的便利。<br/><br/>
+      伺服器成員之間關係和諧，常有線下交流。我們未來的規劃是養老、長期建設、不更換存檔；四年堅持公益，資金來源於腐竹自掏腰包以及自願眾籌。<br/><br/>
+      活躍人數過少瀕臨倒閉，報名且素質經審核後沒有問題伺服器都會收。<br/><br/>
+      生電上，傾向於製造穩定、好用、魯棒性高的機器，以此滿足建築和遊戲內娛樂活動的材料需求。不刻意追求極端或不穩定的新技術。<br/><br/>
+      作為一個慢節奏的長期伺服器，我們希望打造一個共同學習、成長並增強交流的平台，在技術和建築的平衡下共建一個溫暖的賽博烏托邦。
+    </p>
+  </div>
 </div>
 <nav>
   <div class="left-group">
-    <img class="logo" src="screenshot/VGTB.png" alt="VGTB Logo"/>
-    <a href="#intro">介紹</a>
+    <img class="logo" src="screenshot/logo.png" alt="VGTB 標誌"/>
+    <a href="#intro">加入</a>
     <a href="#rules">規則</a>
   </div>
   <div>
@@ -242,9 +289,9 @@
   <ul>
     <li>伺服器 IP：<strong>vgtb.net</strong></li>
     <li>版本：Minecraft 1.16.5（Fabric）</li>
-    <li>請先加入Discord(網頁右上角工具列)或招新群(QQ)725775316</li>
+    <li>請先加入Discord（網頁右上角工具列）或是招新群(QQ)725775316</li>
   </ul>
-  <h2>📦 使用模组</h2>
+  <h2>📦 使用模組</h2>
   <ul>
     <li>Carpet</li>
     <li>Lithium</li>
@@ -263,7 +310,7 @@
     <img src="screenshot/main_city.png" alt="主城"/>
     <img src="screenshot/pagoda.png" alt="寶塔"/>
     <img src="screenshot/chinese_new_year_celebration.png" alt="新年慶祝"/>
-</div>
+  </div>
   <h2>🎥 精彩影片</h2>
   <div class="video-embed">
     <iframe allowfullscreen="" src="https://player.bilibili.com/player.html?bvid=BV1U6421u7VH&high_quality=1&as_wide=1&danmaku=0"></iframe>
@@ -280,10 +327,8 @@
   </div>
 </div>
 <footer>
-  <p>VGTB 伺服器版權所有 @2025</p>
-  <p>網站問題請聯繫木頭草-微信Woodengrass</p>
+  <p>VGTB 伺服器版權所有 ©2025</p>
+  <p>網站問題請聯絡木頭草 - 微信 Woodengrass</p>
 </footer>
-<script src="js/lightbox.js"></script>
-<script src="js/lang-toggle.js"></script>
 </body>
 </html>
