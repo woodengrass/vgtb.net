@@ -266,18 +266,18 @@ body {
     vertical-align: middle;
     animation: popIn 0.8s ease;
   }
-  .container intro-text {
-    max-width: 1000px; 
-    margin: 2rem auto; 
-    padding: 2rem 2.5rem;
-    background: #fefce8; 
-    border-left: 6px solid #facc15; 
-    border-radius: 14px; 
-    box-shadow: 0 4px 16px rgba(0,0,0,0.05); 
-    font-size: 1.1rem; 
-    line-height: 1.95; 
-    color: #444; 
-    opacity: 0; 
-    transform: translateY(50px); 
-    transition: all 0.8s ease-in-out;
-  }
+.container.intro-text {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem 2.5rem;
+  background: #fefce8;
+  border-left: 6px solid #facc15;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  font-size: 1.1rem;
+  line-height: 1.95;
+  color: #444;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-in-out;
+}
