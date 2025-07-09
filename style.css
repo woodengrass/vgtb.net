@@ -65,6 +65,11 @@ body {
     display: flex;
     align-items: center;
   }
+  .right-group {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
   .logo {
     height: 28px;
     margin-right: 1rem;
@@ -280,4 +285,32 @@ body {
   opacity: 0;
   transform: translateY(50px);
   transition: all 0.8s ease-in-out;
+}
+.download-button {
+  background: #1d4ed8;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+  display: inline-block;
+}
+.download-button:hover {
+  background: #2563eb;
+}
+.div-margin-center {
+  margin-top: 1rem;
+  text-align: center;
+}
+.lang-switch {
+  margin-left: 1rem;
+}
+.lang-switch select {
+  background: white;
+  border: none;
+  padding: 0.4em 0.8em;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
 }
