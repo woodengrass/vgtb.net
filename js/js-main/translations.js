@@ -60,9 +60,9 @@ const translations = {
         "contact-text": "网站问题请联系：service@woodengrass.me"
     },
     "en": {
-        "title": "⚡ VGTB Survival Server Introduction",
+        "title": "⚡ VGTB MC Server Introduction",
         "tagline-messages": [
-            "Four years of dedication, seeking partners for the future",
+            "Four years of craftsmanship, seeking partners for the future",
             "Join us now"],
         "nav-join": "Join",
         "nav-rules": "Rules",
@@ -80,7 +80,7 @@ As a slow-paced long-term server, we aim to create a platform for learning, grow
         "mods-more": "For more, see:",
         "download-text": "⬇️ Download Mod Pack",
         "screenshots-title": "📷 Screenshot Showcase",
-        "videos-title": "🎥 Highlight Videos",
+        "videos-title": "🎥 Featured Video",
         "rules-title": "📜 Server Rules",
         "rule-1": "No cheating or hacks allowed",
         "rule-2": "Respect other players",
