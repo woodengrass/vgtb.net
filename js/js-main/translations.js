@@ -27,7 +27,7 @@ const translations = {
         "rule-4": "違規者將踢出伺服器",
         "quote-text": "「歡迎任何人加入（要飯）」",
         "footer-text": "VGTB 伺服器版權所有 ©2025",
-        "contact-text": "网站问题请联系：service@woodengrass.me"
+        "contact-text": "網站問題請聯繫：service@woodengrass.me"
     },
     "zh-Hans": {
         "title": "⚡ VGTB 生电服务器介绍",
