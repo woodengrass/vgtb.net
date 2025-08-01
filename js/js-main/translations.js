@@ -13,7 +13,7 @@ const translations = {
 生電上，傾向於製造穩定、好用、魯棒性高的機器，以此滿足建築和遊戲內娛樂活動的材料需求。不刻意追求極端或不穩定的新技術。
 作為一個慢節奏的長期伺服器，我們希望打造一個共同學習、成長並增強交流的平台，在技術和建築的平衡下共建一個溫暖的賽博烏托邦。`,
         "join-title": "🔗 加入方式",
-        "version": "版本：Minecraft 1.16.5（Fabric）",
+        "version": "版本：Minecraft 1.20.1（Fabric）",
         "join-instruction": "請先加入Discord（網頁右上角工具列）或是招新群(QQ)725775316",
         "mods-title": "📦 使用模組",
         "mods-more": "更多請參見：",
@@ -43,7 +43,7 @@ const translations = {
 生电上，倾向于制造稳定、好用、鲁棒性高的机器，以此满足建筑和游戏内娱乐活动的材料需求。不刻意追求极端或不稳定的新技术。
 作为一个慢节奏的长期伺服器，我们希望打造一个共同学习、成长并增强交流的平台，在技术和建筑的平衡下共建一个温暖的赛博乌托邦。`,
         "join-title": "🔗 加入方式",
-        "version": "版本：Minecraft 1.16.5（Fabric）",
+        "version": "版本：Minecraft 1.20.1（Fabric）",
         "join-instruction": "请先加入Discord（网页右上角工具栏）或是招新群(QQ)725775316",
         "mods-title": "📦 使用模组",
         "mods-more": "更多请参见：",
@@ -74,7 +74,7 @@ Anyone who applies and passes the trialing is welcome.<br/><br/>
 In terms of technical gameplay, we focus on building stable, high robustness, and practical machines to supply materials for construction and in-game activities, rather than pursuing extreme or unstable new techniques.
 As a slow-paced long-term server, we aim to create a platform for learning, growing, and connecting, to build a warm cyber-utopia through a balance of technology and creativity.`,
         "join-title": "🔗 How to Join",
-        "version": "Version: 1.16.5 (Fabric)",
+        "version": "Version: 1.20.1 (Fabric)",
         "join-instruction": "Please join our Discord (top-right link) or our QQ recruitment group 725775316",
         "mods-title": "📦 Mods Used",
         "mods-more": "For more, see:",
